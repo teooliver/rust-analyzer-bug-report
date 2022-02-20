@@ -13,7 +13,6 @@ pub fn event_table() -> Html {
         let state = state.clone();
         use_effect_with_deps(
             move |_| {
-                console::log!("hello there, from use_effect");
                 state.run();
                 || ()
             },
